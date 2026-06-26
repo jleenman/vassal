@@ -1,10 +1,12 @@
+const baseURL = process.env.NUXT_APP_BASE_URL || '/'
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-06-26',
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/main.css'],
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    baseURL,
     head: {
       htmlAttrs: { lang: 'nl' },
       title: 'VASSAL - Jonathan Leenman',
@@ -23,7 +25,7 @@ export default defineNuxtConfig({
         },
         { property: 'og:type', content: 'website' },
       ],
-      link: [{ rel: 'icon', href: 'favicon.svg' }],
+      link: [{ rel: 'icon', href: `${baseURL}favicon.svg` }],
     },
   },
   nitro: {

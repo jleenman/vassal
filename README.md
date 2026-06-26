@@ -27,6 +27,8 @@ npm run build
 
 The GitHub Pages artifact is generated in `.output/public`.
 
+The build script also copies the rendered `/404/index.html` route to `.output/public/404.html`, because GitHub Pages uses that root file as the fallback page.
+
 ## Content
 
 Source content and selected image assets live in `content/`.

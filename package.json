@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "nuxt dev --host 127.0.0.1",
-    "build": "nuxt build --preset github_pages",
+    "build": "nuxt build --preset github_pages && node scripts/prepare-github-pages.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",

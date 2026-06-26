@@ -1,9 +1,13 @@
 <template>
-  <main class="grid min-h-screen place-items-center bg-night px-4 text-center text-ink">
-    <div>
-      <p class="eyebrow">404</p>
-      <h1 class="mt-4 font-display text-5xl font-extrabold">Deze route bestaat niet.</h1>
-      <NuxtLink class="mt-8 inline-flex rounded-lg bg-ink px-6 py-3 text-sm font-bold text-night" to="/">Terug naar homepage</NuxtLink>
-    </div>
+  <main class="vassal-hero grid min-h-screen place-items-center px-4 text-ink">
+    <div class="signal-bar signal-bar-bottom" aria-hidden="true" />
+    <section class="error-panel">
+      <div>
+        <p class="eyebrow text-volta">404</p>
+        <h1>Route kwijt.</h1>
+        <p>Deze pagina bestaat niet, of is bewust uit de hoofdroute gehouden.</p>
+      </div>
+      <NuxtLink class="signal-button" to="/">Terug naar homepage</NuxtLink>
+    </section>
   </main>
 </template>
