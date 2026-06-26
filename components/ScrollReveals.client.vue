@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted } from 'vue'
 
-let context: { revert: () => void } | undefined
+let observer: IntersectionObserver | undefined
 
 onMounted(async () => {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -11,30 +11,32 @@ onMounted(async () => {
     return
   }
 
-  const gsapModule = await import('gsap')
-  const scrollTriggerModule = await import('gsap/ScrollTrigger')
-  const gsap = gsapModule.gsap
-  const ScrollTrigger = scrollTriggerModule.ScrollTrigger
-  gsap.registerPlugin(ScrollTrigger)
+  const elements = Array.from(document.querySelectorAll<HTMLElement>('.reveal'))
+  elements.forEach((element) => {
+    element.style.opacity = '0'
+    element.style.transform = 'translateY(22px)'
+    element.style.transition = 'opacity 760ms ease, transform 760ms cubic-bezier(0.22, 1, 0.36, 1)'
+  })
 
-  context = gsap.context(() => {
-    gsap.utils.toArray<HTMLElement>('.reveal').forEach((element) => {
-      gsap.to(element, {
-        opacity: 1,
-        y: 0,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: element,
-          start: 'top 84%',
-          once: true,
-        },
-      })
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return
+      const element = entry.target as HTMLElement
+      element.style.opacity = '1'
+      element.style.transform = 'translateY(0)'
+      observer?.unobserve(element)
     })
+  }, {
+    rootMargin: '0px 0px -12% 0px',
+    threshold: 0.05,
+  })
+
+  elements.forEach((element) => {
+    observer?.observe(element)
   })
 })
 
-onBeforeUnmount(() => context?.revert())
+onBeforeUnmount(() => observer?.disconnect())
 </script>
 
 <template>

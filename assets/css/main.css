@@ -75,8 +75,8 @@ a {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(22px);
+  opacity: 1;
+  transform: none;
 }
 
 .magnetic-link {
@@ -115,6 +115,50 @@ a {
     linear-gradient(0deg, rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
     repeating-radial-gradient(circle at 0 0, transparent 0, rgba(255,255,255,0.4) 1px, transparent 2px);
   mix-blend-mode: overlay;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at 50% 45%, black, transparent 72%);
+}
+
+.hero-lens {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 18rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255,255,255,0.44), transparent 18%),
+    radial-gradient(circle at 62% 68%, rgba(157,255,223,0.26), transparent 30%),
+    rgba(255,255,255,0.04);
+  filter: blur(0.2px);
+  transform: translate(-50%, -50%) rotateX(62deg) rotateZ(-22deg);
+  animation: lens-drift 12s ease-in-out infinite alternate;
+}
+
+.hero-lens-b {
+  width: 26rem;
+  border-color: rgba(143, 167, 255, 0.22);
+  background: radial-gradient(circle at 50% 50%, rgba(143,167,255,0.18), transparent 58%);
+  animation-duration: 16s;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes lens-drift {
+  from {
+    transform: translate(-52%, -50%) rotateX(62deg) rotateZ(-22deg) scale(0.96);
+  }
+  to {
+    transform: translate(-48%, -52%) rotateX(62deg) rotateZ(18deg) scale(1.04);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

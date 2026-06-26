@@ -22,6 +22,9 @@
       <div class="reveal relative min-h-[420px] lg:min-h-[610px]">
         <div class="absolute inset-0 rounded-[44px] bg-gradient-to-br from-white/10 via-white/0 to-signal/10 blur-3xl" />
         <div class="glass relative h-[420px] overflow-hidden rounded-[38px] lg:h-[610px]">
+          <div class="hero-lens hero-lens-a" aria-hidden="true" />
+          <div class="hero-lens hero-lens-b" aria-hidden="true" />
+          <div class="hero-grid" aria-hidden="true" />
           <ClientOnly>
             <HeroDifferenceField />
             <template #fallback>

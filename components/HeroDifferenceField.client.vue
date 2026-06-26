@@ -41,16 +41,39 @@ onMounted(async () => {
   const prism = new THREE.Mesh(new THREE.IcosahedronGeometry(1.8, 1), glassMaterial)
   root.add(prism)
 
+  const innerCore = new THREE.Mesh(
+    new THREE.TorusKnotGeometry(0.72, 0.12, 180, 18),
+    new THREE.MeshStandardMaterial({
+      color: '#9dffdf',
+      emissive: '#17473d',
+      roughness: 0.18,
+      metalness: 0.18,
+      transparent: true,
+      opacity: 0.78,
+    }),
+  )
+  root.add(innerCore)
+
   const wire = new THREE.Mesh(
     new THREE.IcosahedronGeometry(1.86, 1),
     new THREE.MeshBasicMaterial({
       color: '#9dffdf',
       wireframe: true,
       transparent: true,
-      opacity: 0.16,
+      opacity: 0.32,
     }),
   )
   root.add(wire)
+
+  const edges = new THREE.LineSegments(
+    new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(2.12, 2)),
+    new THREE.LineBasicMaterial({
+      color: '#f7f8f4',
+      transparent: true,
+      opacity: 0.16,
+    }),
+  )
+  root.add(edges)
 
   const ringMaterial = new THREE.MeshBasicMaterial({
     color: '#8fa7ff',
@@ -88,6 +111,9 @@ onMounted(async () => {
   root.add(particles)
 
   scene.add(new THREE.AmbientLight('#ccecff', 1.8))
+  const keyLight = new THREE.DirectionalLight('#ffffff', 2.8)
+  keyLight.position.set(2, 3, 5)
+  scene.add(keyLight)
   const cyanLight = new THREE.PointLight('#9dffdf', 20, 15)
   cyanLight.position.set(-3, 3, 5)
   scene.add(cyanLight)
@@ -119,6 +145,9 @@ onMounted(async () => {
     root.rotation.x += (targetX - root.rotation.x) * 0.045
     root.rotation.y += (targetY + frame - root.rotation.y) * 0.035
     prism.rotation.z = Math.sin(frame * 0.7) * 0.12
+    innerCore.rotation.x = frame * 1.4
+    innerCore.rotation.y = -frame * 0.9
+    edges.rotation.z = -frame * 0.22
     particles.rotation.y = -frame * 0.38
     renderer.render(scene, camera)
     animationId = window.requestAnimationFrame(animate)
