@@ -7,7 +7,8 @@ Static Nuxt site for Jonathan Leenman's personal homepage.
 - Nuxt / Vue
 - TypeScript
 - Tailwind CSS
-- GSAP for scroll reveals
+- GSAP is available for future choreographed scroll moments
+- Native IntersectionObserver reveal behavior
 - Three.js for the client-only hero field
 - GitHub Pages static deployment
 
@@ -35,10 +36,12 @@ The old WordPress export is kept locally in `archive/`, which is gitignored.
 
 ## GitHub Pages
 
-For project Pages, set `NUXT_APP_BASE_URL` to the repository path, for example:
+The GitHub Actions workflow defaults `NUXT_APP_BASE_URL` to `/<repository-name>/`, which is the right value for project Pages.
+
+For a custom domain or user Pages repository, set the repository variable `NUXT_APP_BASE_URL` to `/`.
+
+For local project-path testing:
 
 ```bash
 NUXT_APP_BASE_URL=/vassal/ npm run build
 ```
-
-For a custom domain or user Pages repository, use `/`.
