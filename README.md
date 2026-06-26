@@ -7,9 +7,8 @@ Static Nuxt site for Jonathan Leenman's personal homepage.
 - Nuxt / Vue
 - TypeScript
 - Tailwind CSS
-- GSAP is available for future choreographed scroll moments
 - Native IntersectionObserver reveal behavior
-- Three.js for the client-only hero field
+- CSS 3D typography and sticky signal rails
 - GitHub Pages static deployment
 
 ## Local Development

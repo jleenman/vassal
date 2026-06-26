@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
     head: {
       htmlAttrs: { lang: 'nl' },
-      title: 'Jonathan Leenman - Product thinker & builder',
+      title: 'VASSAL - Jonathan Leenman',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {

@@ -2,10 +2,10 @@
 import { assets, contactLinks, impactPatterns, principles, trajectory } from '~/data/siteContent'
 
 useSeoMeta({
-  title: 'Jonathan Leenman - The difference maker',
+  title: 'VASSAL - Jonathan Leenman',
   description:
     'Een persoonlijke homepage over productdenken, UX, software, data, systemen en nieuwe manieren van bouwen.',
-  ogTitle: 'Jonathan Leenman - The difference maker',
+  ogTitle: 'VASSAL - Jonathan Leenman',
   ogDescription: 'Product thinker, builder en systems thinker op het snijvlak van product, UX, software en data.',
 })
 </script>
@@ -24,7 +24,7 @@ useSeoMeta({
           body="Vaak zit de echte beweging in het model erachter: rollen, data, context, frictie en timing. Ik probeer complexe domeinen terug te brengen tot heldere modellen, betere keuzes en interfaces die logisch voelen."
         />
         <div class="mt-14 grid gap-4 md:grid-cols-2">
-          <article v-for="principle in principles" :key="principle.kicker" class="reveal light-panel rounded-[28px] p-7">
+          <article v-for="principle in principles" :key="principle.kicker" class="reveal light-panel rounded-lg p-7">
             <p class="text-sm font-extrabold uppercase tracking-[0.16em] text-night/42">{{ principle.kicker }}</p>
             <h3 class="mt-5 font-display text-2xl font-extrabold leading-tight">{{ principle.title }}</h3>
             <p class="mt-4 leading-7 text-night/64">{{ principle.body }}</p>
@@ -34,14 +34,13 @@ useSeoMeta({
     </section>
 
     <section id="field" class="relative overflow-hidden bg-night px-4 py-24 text-ink md:py-32">
-      <div class="absolute left-1/2 top-0 h-96 w-[42rem] -translate-x-1/2 rounded-full bg-signal/10 blur-3xl" />
       <div class="section-shell grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div class="reveal relative overflow-hidden rounded-[34px]">
-          <img class="aspect-[4/5] h-full w-full object-cover opacity-88" :src="assets.rotterdam" alt="Uitzicht over Rotterdam als contextbeeld voor systemen, stad en infrastructuur" />
-          <div class="absolute inset-0 bg-gradient-to-t from-night via-night/20 to-transparent" />
-          <div class="absolute bottom-6 left-6 right-6 glass rounded-3xl p-5">
-            <p class="text-sm leading-6 text-ink/72">Data, plekken, mensen en beslissingen komen samen in producten die helder moeten blijven.</p>
-          </div>
+        <div class="reveal relative overflow-hidden rounded-lg">
+          <SignalImagePanel
+            :src="assets.rotterdam"
+            alt="Uitzicht over Rotterdam als contextbeeld voor systemen, stad en infrastructuur"
+            caption="Data, plekken, mensen en beslissingen komen samen in producten die helder moeten blijven."
+          />
         </div>
         <div>
           <SectionIntro
@@ -51,8 +50,8 @@ useSeoMeta({
             body="Mijn huidige werk draait om producten waarin sensordata, geo-informatie, monitoring, dashboards, kaarten en analyse samenkomen. Technische diepte is nodig, maar het product moet voor gebruikers vooral richting geven."
           />
           <div class="reveal mt-10 grid gap-3 sm:grid-cols-2">
-            <p class="glass rounded-3xl p-5 text-sm leading-6 text-ink/70">API-first software die kan meegroeien zonder dat elk scherm een nieuw eiland wordt.</p>
-            <p class="glass rounded-3xl p-5 text-sm leading-6 text-ink/70">Visualisaties die niet alleen mooi zijn, maar helpen om beslissingen te nemen.</p>
+            <p class="glass rounded-lg p-5 text-sm leading-6 text-ink/70">API-first software die kan meegroeien zonder dat elk scherm een nieuw eiland wordt.</p>
+            <p class="glass rounded-lg p-5 text-sm leading-6 text-ink/70">Visualisaties die niet alleen mooi zijn, maar helpen om beslissingen te nemen.</p>
           </div>
         </div>
       </div>
@@ -86,7 +85,7 @@ useSeoMeta({
           />
         </div>
         <div class="grid gap-3">
-          <div v-for="pattern in impactPatterns" :key="pattern" class="reveal glass rounded-3xl px-6 py-5 font-display text-2xl font-extrabold text-balance">
+          <div v-for="pattern in impactPatterns" :key="pattern" class="reveal glass rounded-lg px-6 py-5 font-display text-2xl font-extrabold text-balance">
             {{ pattern }}
           </div>
         </div>
@@ -102,17 +101,17 @@ useSeoMeta({
             body="Ik houd van technologie, maar vooral van wat technologie mogelijk maakt als het goed ontworpen is. Buiten werk ben ik vader van vijf. Dat houdt me scherp over aandacht, prioriteit en eenvoud."
           />
         </div>
-        <img class="reveal aspect-square rounded-[34px] object-cover shadow-glass" :src="assets.portrait" alt="Portretfoto van Jonathan Leenman" />
+        <img class="reveal aspect-square rounded-lg object-cover shadow-glass" :src="assets.portrait" alt="Portretfoto van Jonathan Leenman" />
       </div>
     </section>
 
     <section id="contact" class="relative overflow-hidden bg-night px-4 py-24 text-ink md:py-32">
       <div class="section-shell">
-        <div class="reveal glass mx-auto max-w-4xl rounded-[38px] p-8 text-center md:p-14">
+        <div class="reveal glass mx-auto max-w-4xl rounded-lg p-8 text-center md:p-14">
           <p class="eyebrow">Contact</p>
           <h2 class="mt-5 font-display text-4xl font-extrabold leading-tight md:text-6xl">Voor gesprekken over product, systemen en nieuwe manieren van bouwen.</h2>
           <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a v-for="link in contactLinks" :key="link.href" class="rounded-full bg-ink px-6 py-3 text-sm font-extrabold text-night transition hover:bg-signal" :href="link.href">
+            <a v-for="link in contactLinks" :key="link.href" class="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold text-night transition hover:bg-signal" :href="link.href">
               {{ link.label }}
             </a>
           </div>

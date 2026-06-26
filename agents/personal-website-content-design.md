@@ -101,7 +101,7 @@ Visuele richting:
 - veel witruimte;
 - sterke typografie;
 - subtiele glass- en depth-effecten;
-- een memorabele 3D/glass hero;
+- een memorabele VASSAL/z-depth hero;
 - scroll-animaties als reis, niet als truc;
 - donkere of hybride basis mogelijk, zolang de leesbaarheid hoog blijft;
 - geen druk portfolio-grid;
@@ -113,8 +113,9 @@ Inspiratie mag komen uit Apple, Linear, Stripe, Vercel, Notion en Raycast, maar 
 
 Gebruik een beperkt aantal effecten die samen een systeem vormen:
 
-- een abstracte 3D/glass hero die product, data, systems thinking en toekomstgericht bouwen suggereert;
-- layered glass panels voor diepte;
+- z-depth typografie die de oude VASSAL-header volwassen terughaalt;
+- harde signaallijnen en sticky rails als herkenbaar VASSAL-motief;
+- een round-peg/square-hole compositie als visuele metafoor voor anders denken;
 - subtiele scroll-reveals voor content;
 - sticky of pinned secties alleen waar het verhaal er sterker door wordt;
 - typografische accenten die woorden als "systems", "builder", "different" of "thinking" visueel dragen.
@@ -145,15 +146,15 @@ Voor de latere implementatie:
 - TypeScript;
 - Tailwind CSS;
 - lokale Markdown/content;
-- GSAP voor scroll/timing;
-- TresJS/Three.js voor een enkele 3D hero-scene;
+- CSS 3D typografie;
+- native IntersectionObserver voor scroll-reveals;
 - GitHub Pages als statische hosting.
 
 Nog niet toevoegen zonder concrete noodzaak:
 
 - CMS;
 - zware smooth-scroll libraries;
-- veel shader/post-processing;
+- betekenisloze 3D- of shader-effecten;
 - generieke UI component library;
 - analytics;
 - backend/formservice.
