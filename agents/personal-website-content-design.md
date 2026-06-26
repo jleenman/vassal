@@ -116,6 +116,8 @@ Gebruik een beperkt aantal effecten die samen een systeem vormen:
 
 - z-depth typografie die de oude VASSAL-header volwassen terughaalt;
 - rode/gouden signaallijnen en sticky rails als herkenbaar VASSAL-motief;
+- een vaste, smalle voortgangsrail op desktop die de bezoekersreis als lijn voelbaar maakt zonder content te blokkeren;
+- hoofdstukmarkeringen en grote typografische labels in lichte secties, zodat de reis ontworpen voelt in plaats van als standaard contentgrid;
 - schild/brand-erfgoed als subtiel anker, niet als nostalgisch hoofdbeeld;
 - subtiele scroll-reveals voor content;
 - sticky of pinned secties alleen waar het verhaal er sterker door wordt;

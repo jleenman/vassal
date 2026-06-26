@@ -13,22 +13,29 @@ useSeoMeta({
 <template>
   <main>
     <SiteHeader />
+    <SignalSpine />
     <HeroSection />
     <DifferenceBridge />
 
-    <section id="thinking" class="relative bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
-      <div class="section-shell">
-        <SectionIntro
-          kicker="Zo denkt Jonathan"
-          title="Niet elke vraag is een feature."
-          body="Vaak zit de echte beweging in het model erachter: rollen, data, context, frictie en timing. Ik probeer complexe domeinen terug te brengen tot heldere modellen, betere keuzes en interfaces die logisch voelen."
-        />
-        <div class="mt-14 grid gap-4 md:grid-cols-2">
-          <article v-for="principle in principles" :key="principle.kicker" class="reveal light-panel rounded-lg p-7">
-            <p class="text-sm font-extrabold uppercase tracking-[0.16em] text-night/42">{{ principle.kicker }}</p>
-            <h3 class="mt-5 font-display text-2xl font-extrabold leading-tight">{{ principle.title }}</h3>
-            <p class="mt-4 leading-7 text-night/64">{{ principle.body }}</p>
-          </article>
+    <section id="thinking" class="paper-section relative px-4 py-24 text-night md:py-32">
+      <div class="section-shell section-composition">
+        <div class="chapter-mark reveal" aria-hidden="true">
+          <span>01</span>
+          <strong>THINK</strong>
+        </div>
+        <div>
+          <SectionIntro
+            kicker="Zo denkt Jonathan"
+            title="Niet elke vraag is een feature."
+            body="Vaak zit de echte beweging in het model erachter: rollen, data, context, frictie en timing. Ik probeer complexe domeinen terug te brengen tot heldere modellen, betere keuzes en interfaces die logisch voelen."
+          />
+          <div class="principle-board mt-14">
+            <article v-for="principle in principles" :key="principle.kicker" class="reveal principle-card" :data-kicker="principle.kicker">
+              <p class="principle-card__kicker">{{ principle.kicker }}</p>
+              <h3>{{ principle.title }}</h3>
+              <p>{{ principle.body }}</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -57,19 +64,26 @@ useSeoMeta({
       </div>
     </section>
 
-    <section id="trajectory" class="bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
-      <div class="section-shell">
-        <SectionIntro
-          kicker="De vormende lijn"
-          title="Geen rechte lijn. Wel een duidelijke richting."
-          body="Games, onderwijs, websoftware en productontwikkeling lijken losse hoofdstukken. Voor mij vormen ze een patroon: systemen begrijpen, mensen meenemen en abstracte ideeen concreet maken."
-        />
-        <div class="mt-16 grid gap-4">
-          <article v-for="item in trajectory" :key="item.label" class="reveal grid gap-4 border-t border-night/12 py-7 md:grid-cols-[180px_1fr_1.15fr]">
-            <p class="font-display text-2xl font-extrabold text-night/34">{{ item.label }}</p>
-            <h3 class="font-display text-2xl font-extrabold leading-tight">{{ item.title }}</h3>
-            <p class="leading-7 text-night/64">{{ item.body }}</p>
-          </article>
+    <section id="trajectory" class="paper-section px-4 py-24 text-night md:py-32">
+      <div class="section-shell section-composition">
+        <div class="chapter-mark reveal" aria-hidden="true">
+          <span>03</span>
+          <strong>LINE</strong>
+        </div>
+        <div>
+          <SectionIntro
+            kicker="De vormende lijn"
+            title="Geen rechte lijn. Wel een duidelijke richting."
+            body="Games, onderwijs, websoftware en productontwikkeling lijken losse hoofdstukken. Voor mij vormen ze een patroon: systemen begrijpen, mensen meenemen en abstracte ideeen concreet maken."
+          />
+          <div class="trajectory-list mt-16">
+            <article v-for="(item, index) in trajectory" :key="item.label" class="reveal trajectory-item">
+              <p class="trajectory-item__index">{{ String(index + 1).padStart(2, '0') }}</p>
+              <p class="trajectory-item__label">{{ item.label }}</p>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.body }}</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
