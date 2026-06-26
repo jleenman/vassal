@@ -13,6 +13,13 @@ onMounted(async () => {
 
   const elements = Array.from(document.querySelectorAll<HTMLElement>('.reveal'))
   elements.forEach((element) => {
+    const rect = element.getBoundingClientRect()
+    if (rect.top < window.innerHeight * 0.92) {
+      element.style.opacity = '1'
+      element.style.transform = 'translateY(0)'
+      return
+    }
+
     element.style.opacity = '0'
     element.style.transform = 'translateY(22px)'
     element.style.transition = 'opacity 760ms ease, transform 760ms cubic-bezier(0.22, 1, 0.36, 1)'
@@ -32,7 +39,9 @@ onMounted(async () => {
   })
 
   elements.forEach((element) => {
-    observer?.observe(element)
+    if (element.style.opacity === '0') {
+      observer?.observe(element)
+    }
   })
 })
 
