@@ -45,25 +45,104 @@ const sections = [
     ],
   },
 ]
+
+const timeline = [
+  {
+    period: 'Nu',
+    title: 'Product, systemen en data',
+    body: 'Productrichting, UX, informatiearchitectuur, requirements en moderne software rond monitoring, kaarten, dashboards en analyse.',
+  },
+  {
+    period: 'Web',
+    title: 'Freelance software en front-end',
+    body: 'Front-end projecten, API-koppelingen, Shopify, WordPress, maatwerk plugins, online tools en technisch advies.',
+  },
+  {
+    period: 'Onderwijs',
+    title: 'Docent, coach en examinator',
+    body: 'ICT, programmeren, webapplicaties, front-end development en applied game design overdraagbaar maken.',
+  },
+  {
+    period: 'Games',
+    title: 'Game design en interactie',
+    body: 'Mechanics, feedbackloops, level design, verhaal en interactie voor console-, web- en educatieve games.',
+  },
+]
+
+const contact = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jonathanleenman/' },
+  { label: 'E-mail', href: 'mailto:jonathan@vassal.nl' },
+]
 </script>
 
 <template>
-  <main class="min-h-screen bg-[#f7f4ec] px-4 py-10 text-night">
-    <div class="mx-auto max-w-4xl">
-      <NuxtLink class="magnetic-link text-sm font-bold" to="/">Terug naar homepage</NuxtLink>
-      <header class="mt-16 border-b border-night/12 pb-10">
-        <p class="eyebrow">Secondary page</p>
-        <h1 class="mt-4 font-display text-6xl font-extrabold leading-none md:text-8xl">CV</h1>
-        <p class="mt-5 max-w-2xl text-lg leading-8 text-night/68">Een rustig naslagpunt. De hoofdsite vertelt het verhaal; deze pagina houdt de feiten bij elkaar.</p>
+  <main class="cv-page min-h-screen px-4 py-6 text-night md:py-10">
+    <div class="mx-auto max-w-5xl">
+      <nav class="cv-nav" aria-label="CV navigatie">
+        <NuxtLink class="magnetic-link text-sm font-black" to="/">Terug naar homepage</NuxtLink>
+        <div class="hidden gap-4 text-sm font-bold text-night/58 sm:flex">
+          <a v-for="link in contact" :key="link.href" class="magnetic-link" :href="link.href">{{ link.label }}</a>
+        </div>
+      </nav>
+
+      <header class="cv-hero">
+        <div>
+          <p class="eyebrow">Secondary page</p>
+          <h1>CV</h1>
+          <p>Een rustig naslagpunt. De hoofdsite vertelt het verhaal; deze pagina houdt de feiten bij elkaar.</p>
+        </div>
+        <aside aria-label="Kerngegevens">
+          <span>Jonathan Leenman</span>
+          <strong>Product / UX / Software / Data</strong>
+          <span>Schiedam, Nederland</span>
+        </aside>
       </header>
-      <section class="py-10">
-        <article v-for="section in sections" :key="section.title" class="border-b border-night/10 py-8">
-          <h2 class="font-display text-2xl font-extrabold">{{ section.title }}</h2>
-          <ul class="mt-5 grid gap-3 text-night/70">
-            <li v-for="item in section.items" :key="item" class="leading-7">{{ item }}</li>
+
+      <section class="cv-grid py-10">
+        <article class="cv-card cv-card--profile">
+          <p class="eyebrow">Profiel</p>
+          <h2>Productdenker, builder en systems thinker.</h2>
+          <p>
+            Ik beweeg tussen product, UX, software, data en nieuwe manieren van bouwen. Mijn kracht zit in complexe materie ordenen, keuzes scherp maken en dicht bij makers blijven.
+          </p>
+        </article>
+
+        <article class="cv-card">
+          <p class="eyebrow">Richting</p>
+          <ul>
+            <li v-for="item in sections[1]?.items" :key="item">{{ item }}</li>
           </ul>
         </article>
       </section>
+
+      <section class="cv-timeline" aria-labelledby="cv-line-title">
+        <div class="cv-section-head">
+          <p class="eyebrow">Lijn</p>
+          <h2 id="cv-line-title">Ervaring in hoofdlijnen</h2>
+        </div>
+        <article v-for="item in timeline" :key="item.period" class="cv-timeline__item">
+          <p>{{ item.period }}</p>
+          <h3>{{ item.title }}</h3>
+          <span>{{ item.body }}</span>
+        </article>
+      </section>
+
+      <section class="cv-skills" aria-labelledby="cv-skill-title">
+        <div class="cv-section-head">
+          <p class="eyebrow">Werkvelden</p>
+          <h2 id="cv-skill-title">Geen balkjes. Wel terugkerende gebieden.</h2>
+        </div>
+        <div>
+          <span v-for="item in sections[3]?.items" :key="item">{{ item }}</span>
+        </div>
+      </section>
+
+      <footer class="cv-footer">
+        <p>Jonathan Leenman</p>
+        <div>
+          <a v-for="link in contact" :key="link.href" class="magnetic-link" :href="link.href">{{ link.label }}</a>
+        </div>
+      </footer>
     </div>
   </main>
 </template>
