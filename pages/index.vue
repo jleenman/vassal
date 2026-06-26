@@ -14,6 +14,7 @@ useSeoMeta({
   <main>
     <SiteHeader />
     <HeroSection />
+    <DifferenceBridge />
 
     <section id="thinking" class="relative bg-[#f7f4ec] px-4 py-24 text-night md:py-32">
       <div class="section-shell">

@@ -25,6 +25,10 @@
           <div class="hero-lens hero-lens-a" aria-hidden="true" />
           <div class="hero-lens hero-lens-b" aria-hidden="true" />
           <div class="hero-grid" aria-hidden="true" />
+          <div class="field-word left-7 top-7">Think</div>
+          <div class="field-word right-7 top-16">Shape</div>
+          <div class="field-word bottom-40 left-8">Build</div>
+          <div class="field-word bottom-36 right-8">Move</div>
           <ClientOnly>
             <HeroDifferenceField />
             <template #fallback>
