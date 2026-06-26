@@ -1,0 +1,57 @@
+{
+  "assets": [
+    {
+      "file": "assets/jonathan-profile.jpg",
+      "role": "primary portrait",
+      "source": "old WordPress media export",
+      "use": "profile, about section, possibly CV"
+    },
+    {
+      "file": "assets/jonathan-context.jpeg",
+      "role": "personal/context image",
+      "source": "old WordPress media export",
+      "use": "supporting personal section if it matches final tone"
+    },
+    {
+      "file": "assets/vassal-logo.png",
+      "role": "legacy logo/favicon source",
+      "source": "old WordPress media export",
+      "use": "only if VASSAL remains as brand marker"
+    },
+    {
+      "file": "assets/boutme.jpg",
+      "role": "legacy visual/CTA image",
+      "source": "old WordPress media export",
+      "use": "archive candidate; only use if visually useful"
+    },
+    {
+      "file": "assets/uitzicht-rotterdam.jpg",
+      "role": "location/context atmosphere",
+      "source": "old WordPress media export",
+      "use": "possible background or subtle context image"
+    },
+    {
+      "file": "assets/content-event-8616.jpg",
+      "role": "event/context atmosphere",
+      "source": "old WordPress media export",
+      "use": "optional, only if it supports the narrative"
+    },
+    {
+      "file": "assets/glass-reference-unsplash.jpg",
+      "role": "visual reference",
+      "source": "old WordPress media export",
+      "use": "possible inspiration or background; verify licensing before public use"
+    },
+    {
+      "file": "assets/game-video-still.jpg",
+      "role": "game background reference",
+      "source": "old WordPress media export",
+      "use": "possible support for game design career line"
+    }
+  ],
+  "archived_not_selected": [
+    "WordPress thumbnails",
+    "Elementor screenshots",
+    "duplicate image sizes"
+  ]
+}
