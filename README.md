@@ -2,6 +2,8 @@
 
 Static Nuxt site for Jonathan Leenman's personal homepage.
 
+Live site: https://jleenman.github.io/vassal/
+
 ## Stack
 
 - Nuxt / Vue
