@@ -6,7 +6,7 @@
     "dev": "nuxt dev --host 127.0.0.1",
     "build": "nuxt build --preset github_pages",
     "generate": "nuxt generate",
-    "preview": "nuxt preview --host 127.0.0.1",
+    "preview": "nuxt preview",
     "typecheck": "nuxt typecheck",
     "lint": "nuxt typecheck"
   },
@@ -21,6 +21,6 @@
     "@types/node": "^24.0.0",
     "@types/three": "^0.181.0",
     "typescript": "^5.9.0",
-    "vue-tsc": "^3.1.0"
+    "vue-tsc": "^3.3.5"
   }
 }
