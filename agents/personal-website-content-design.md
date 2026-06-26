@@ -100,22 +100,23 @@ Visuele richting:
 - modern, rustig en professioneel;
 - veel witruimte;
 - sterke typografie;
-- subtiele glass- en depth-effecten;
+- subtiele depth-effecten, maar geen generiek glassmorphism als hoofdtaal;
 - een memorabele VASSAL/z-depth hero;
+- palet gebaseerd op het oude VASSAL-logo: diep rood, goud/oranje, bijna zwart, donkerblauw/grafiet en warm wit;
 - scroll-animaties als reis, niet als truc;
 - donkere of hybride basis mogelijk, zolang de leesbaarheid hoog blijft;
 - geen druk portfolio-grid;
 - geen standaard CV-layout als hoofdpagina.
 
-Inspiratie mag komen uit Apple, Linear, Stripe, Vercel, Notion en Raycast, maar de site moet eigen voelen.
+Inspiratie mag komen uit Apple, Linear, Stripe, Vercel, Notion en Raycast, maar de site moet eigen voelen. Voorkom zowel een Apple-kloon als een street-style/art-house richting. De energie moet zitten in scherpe compositie, merkdiepte, echte beelden en slimme frictie.
 
 ## Effectstrategie
 
 Gebruik een beperkt aantal effecten die samen een systeem vormen:
 
 - z-depth typografie die de oude VASSAL-header volwassen terughaalt;
-- harde signaallijnen en sticky rails als herkenbaar VASSAL-motief;
-- een round-peg/square-hole compositie als visuele metafoor voor anders denken;
+- rode/gouden signaallijnen en sticky rails als herkenbaar VASSAL-motief;
+- schild/brand-erfgoed als subtiel anker, niet als nostalgisch hoofdbeeld;
 - subtiele scroll-reveals voor content;
 - sticky of pinned secties alleen waar het verhaal er sterker door wordt;
 - typografische accenten die woorden als "systems", "builder", "different" of "thinking" visueel dragen.
@@ -137,6 +138,13 @@ Gewenste indruk:
 > Jonathan is een verschilmaker: iemand die anders kijkt, systemen doorziet en nieuwe manieren van bouwen serieus vorm kan geven.
 
 Gebruik geen letterlijke verwijzingen naar Apple, Jobs, Ive, "think different" of "crazy ones" in de sitecopy. Die inspiratie mag in het ontwerp en de energie zitten, niet als quote.
+
+Ontwerpgevoel:
+
+- rustige professionaliteit met een onderstroom van onafhankelijk denken;
+- rebels door keuzes, niet door lawaai;
+- warm en menselijk genoeg voor persoonlijke geloofwaardigheid;
+- precies en zakelijk genoeg voor klanten, cofounders en professionele relaties.
 
 ## Stackrichting
 

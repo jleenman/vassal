@@ -16,7 +16,7 @@ useSeoMeta({
     <HeroSection />
     <DifferenceBridge />
 
-    <section id="thinking" class="relative bg-[#f7f4ec] px-4 py-24 text-night md:py-32">
+    <section id="thinking" class="relative bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
       <div class="section-shell">
         <SectionIntro
           kicker="Zo denkt Jonathan"
@@ -33,7 +33,7 @@ useSeoMeta({
       </div>
     </section>
 
-    <section id="field" class="relative overflow-hidden bg-night px-4 py-24 text-ink md:py-32">
+    <section id="field" class="relative overflow-hidden bg-graphite px-4 py-24 text-ink md:py-32">
       <div class="section-shell grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div class="reveal relative overflow-hidden rounded-lg">
           <SignalImagePanel
@@ -57,7 +57,7 @@ useSeoMeta({
       </div>
     </section>
 
-    <section id="trajectory" class="bg-[#f7f4ec] px-4 py-24 text-night md:py-32">
+    <section id="trajectory" class="bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
       <div class="section-shell">
         <SectionIntro
           kicker="De vormende lijn"
@@ -92,7 +92,7 @@ useSeoMeta({
       </div>
     </section>
 
-    <section class="bg-[#f7f4ec] px-4 py-24 text-night md:py-32">
+    <section class="bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
       <div class="section-shell grid items-center gap-12 lg:grid-cols-[1fr_0.8fr]">
         <div>
           <SectionIntro

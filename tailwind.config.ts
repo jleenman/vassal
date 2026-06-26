@@ -12,19 +12,19 @@ export default <Partial<Config>>{
     extend: {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Inter Tight', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Barlow Semi Condensed', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
-        ink: '#f7f8f4',
-        night: '#080b10',
-        graphite: '#121722',
-        signal: '#9dffdf',
-        volta: '#ffb86b',
-        iris: '#8fa7ff',
+        ink: '#f6f1e8',
+        night: '#11151b',
+        graphite: '#18222b',
+        signal: '#bd1b21',
+        volta: '#f2a51a',
+        iris: '#3f5366',
       },
       boxShadow: {
-        glass: '0 24px 80px rgba(0, 0, 0, 0.38)',
-        glow: '0 0 80px rgba(157, 255, 223, 0.2)',
+        glass: '0 24px 80px rgba(0, 0, 0, 0.3)',
+        glow: '0 0 80px rgba(189, 27, 33, 0.18)',
       },
     },
   },
