@@ -182,7 +182,7 @@ a {
 }
 
 .zword-wrap {
-  width: min(100%, 66rem);
+  width: min(100%, 58rem);
   margin-top: 1.3rem;
   perspective: 900px;
 }
@@ -194,7 +194,7 @@ a {
 
 .zword {
   position: relative;
-  min-height: clamp(6.2rem, 18vw, 14rem);
+  min-height: clamp(6.2rem, 16vw, 12rem);
   transform-style: preserve-3d;
   transform: rotateX(10deg) rotateY(-18deg) rotateZ(-2deg);
   animation: zword-drift 9s ease-in-out infinite alternate;
@@ -206,13 +206,13 @@ a {
   top: 0;
   color: var(--vassal-paper);
   font-family: "Barlow Semi Condensed", Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: clamp(4.8rem, 15.5vw, 12.6rem);
+  font-size: clamp(4.8rem, 13.6vw, 10.9rem);
   font-weight: 900;
   letter-spacing: 0;
   line-height: 0.82;
   text-transform: uppercase;
   text-shadow: 0 1px 0 rgba(255,255,255,0.12);
-  transform: translate3d(calc(var(--layer) * 0.25rem), calc(var(--layer) * 0.2rem), calc(var(--layer) * -1.6rem));
+  transform: translate3d(calc(var(--layer) * 0.22rem), calc(var(--layer) * 0.18rem), calc(var(--layer) * -1.45rem));
 }
 
 .zword span:nth-child(2n) {
@@ -237,6 +237,16 @@ a {
   }
   to {
     transform: rotateX(15deg) rotateY(-10deg) rotateZ(1deg) translateY(-0.65rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .zword {
+    min-height: clamp(5.8rem, 24vw, 7.4rem);
+  }
+
+  .zword span {
+    font-size: clamp(4.6rem, 20vw, 6.2rem);
   }
 }
 

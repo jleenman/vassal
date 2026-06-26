@@ -17,7 +17,7 @@ import vassalLogo from '~/content/assets/vassal-logo.png'
           </div>
         </div>
         <h1 class="sr-only">Jonathan Leenman - VASSAL</h1>
-        <p class="reveal mt-7 max-w-2xl font-display text-4xl font-extrabold leading-[0.96] tracking-normal text-balance md:text-6xl">
+        <p class="reveal mt-6 max-w-2xl font-display text-4xl font-extrabold leading-[0.96] tracking-normal text-balance md:text-5xl 2xl:text-6xl">
           Anders kijken. Zorgvuldig bouwen. Systemen laten kloppen.
         </p>
       </div>
