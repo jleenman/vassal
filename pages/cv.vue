@@ -42,7 +42,31 @@ const competencies = [
 
 const workExperience = [
   {
-    period: '2019 - heden',
+    period: '2026 - heden',
+    role: 'Product Owner bij Koenders Instruments',
+    context: 'Productvisie en doorontwikkeling van ViewEnVision 3 (VENV), een sensor- en dataplatform voor monitoring, analyse en visualisatie.',
+    details: [
+      'Verantwoordelijk voor de productvisie en doorontwikkeling van ViewEnVision 3 (VENV), een modern sensor- en dataplatform voor monitoring, analyse en visualisatie.',
+      'Vertaalt gebruikerswensen en bedrijfsdoelstellingen naar een duidelijke productroadmap en concrete functionaliteit.',
+      'Werkt samen met stakeholders en developers om gebruiksvriendelijke en toekomstbestendige oplossingen te realiseren.',
+      'Combineert productmanagement met functioneel ontwerp en softwarearchitectuur, met focus op een schaalbaar, API-gedreven platform voor dataverwerking, visualisatie en integraties.',
+      'Stuurt actief op AI-gedreven ontwikkeling en zet AI in om het ontwikkelproces en de platformfunctionaliteit te versnellen en te verbeteren.',
+      'Initiatiefnemer van nieuwe concepten op het gebied van interactieve data-analyse, tijdreeksen, scenarioanalyse en geospatiale visualisaties.',
+    ],
+  },
+  {
+    period: '2023 - 2026',
+    role: 'Product Owner bij Suneti',
+    context: 'Productontwikkeling van bedrijfskritische SaaS-oplossingen.',
+    details: [
+      'Verantwoordelijk voor de productontwikkeling van bedrijfskritische SaaS-oplossingen.',
+      'Vertaalde wensen en behoeften van gebruikers naar een duidelijke productvisie en concrete backlog-items.',
+      'Werkte intensief samen met eindgebruikers, stakeholders en developers om functionaliteit te ontwerpen, prioriteren en realiseren.',
+      'Begeleidde het ontwikkelproces, bewaakte de kwaliteit van opleveringen en droeg bij aan de continue doorontwikkeling van het platform op basis van gebruikersfeedback en bedrijfsdoelstellingen.',
+    ],
+  },
+  {
+    period: '2019 - 2025',
     role: 'ZZP designer en developer',
     context: 'Websoftware, front-end, CMS, webshops en maatwerk.',
     details: [
