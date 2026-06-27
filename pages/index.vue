@@ -12,7 +12,6 @@ useSeoMeta({
 
 <template>
   <main>
-    <SiteHeader />
     <SignalSpine />
     <HeroSection />
     <DifferenceBridge />

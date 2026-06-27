@@ -1,6 +1,5 @@
 <template>
   <section class="bridge-section text-ink">
-    <div class="sticky-rail rail-top" aria-hidden="true" />
     <div class="section-shell grid gap-8 py-20 md:py-28 lg:grid-cols-[0.85fr_1.15fr]">
       <div class="reveal">
         <p class="eyebrow text-volta">Waarom dit werkt</p>

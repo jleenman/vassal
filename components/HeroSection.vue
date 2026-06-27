@@ -4,7 +4,6 @@ import vassalLogo from '~/content/assets/vassal-logo.png'
 
 <template>
   <section class="vassal-hero text-ink">
-    <div class="signal-bar signal-bar-bottom" aria-hidden="true" />
     <div class="section-shell relative z-10 grid min-h-screen items-center gap-10 pb-20 pt-28 lg:grid-cols-[1fr_0.92fr] lg:pt-32">
       <div class="hero-left">
         <div class="reveal hero-identity">

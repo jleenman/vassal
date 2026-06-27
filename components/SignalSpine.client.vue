@@ -52,6 +52,7 @@ onBeforeUnmount(() => {
       class="journey-spine__node"
       :class="{ 'journey-spine__node--active': activeSection === section.id }"
       :href="`#${section.id}`"
+      :aria-current="activeSection === section.id ? 'location' : undefined"
       :style="{ '--node': index / (sections.length - 1) }"
     >
       <span>{{ section.label }}</span>
