@@ -119,21 +119,28 @@ a {
 }
 
 .route-section::before {
-  opacity: 0.72;
-  background-image: url("data:image/svg+xml,%3Csvg width='1600' height='1200' viewBox='0 0 1600 1200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M-80 835 C180 655 235 350 475 318 S845 455 1015 235 1390 42 1680 145' stroke='%2311151b' stroke-opacity='.12' stroke-width='30'/%3E%3Cpath d='M-70 842 C190 662 244 359 478 328 S846 465 1020 244 1398 52 1688 153' stroke='%23f6f1e8' stroke-opacity='.42' stroke-width='18'/%3E%3Cpath d='M112 1230 C270 995 520 930 675 724 S835 302 1110 258 1480 326 1690 72' stroke='%2311151b' stroke-opacity='.11' stroke-width='26'/%3E%3Cpath d='M118 1238 C278 1002 528 938 682 730 S840 312 1116 268 1488 334 1698 80' stroke='%23f6f1e8' stroke-opacity='.42' stroke-width='15'/%3E%3Cpath d='M-70 245 C205 162 390 198 558 326 S835 557 1110 485 1428 318 1680 392' stroke='%23bd1b21' stroke-opacity='.16' stroke-width='14'/%3E%3Cpath d='M245 1180 C308 945 438 800 626 710 S1020 682 1195 512 1342 210 1628 115' stroke='%23f2a51a' stroke-opacity='.16' stroke-width='12'/%3E%3C/g%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  opacity: 0.54;
+  background:
+    radial-gradient(58rem 25rem at 18% 24%, transparent 44%, rgba(17, 21, 27, 0.105) 44.35%, rgba(17, 21, 27, 0.105) 45.2%, transparent 45.55%),
+    radial-gradient(47rem 23rem at 78% 15%, transparent 39%, rgba(17, 21, 27, 0.085) 39.35%, rgba(17, 21, 27, 0.085) 40.3%, transparent 40.65%),
+    radial-gradient(52rem 28rem at 62% 92%, transparent 42%, rgba(17, 21, 27, 0.09) 42.35%, rgba(17, 21, 27, 0.09) 43.15%, transparent 43.5%),
+    radial-gradient(38rem 38rem at 2% 88%, transparent 47%, rgba(17, 21, 27, 0.075) 47.35%, rgba(17, 21, 27, 0.075) 48.4%, transparent 48.75%);
 }
 
 .route-section::after {
-  opacity: 0.64;
-  background-image: url("data:image/svg+xml,%3Csvg width='1600' height='1200' viewBox='0 0 1600 1200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2311151b' stroke-linecap='round' stroke-linejoin='round' stroke-opacity='.13' stroke-width='5'%3E%3Cpath d='M130 60 C205 140 248 225 245 328 S184 520 248 612 455 690 518 802 445 1010 525 1160'/%3E%3Cpath d='M428 82 C485 190 585 252 688 260 S895 212 972 288 1008 500 1116 575 1325 598 1455 742'/%3E%3Cpath d='M742 -60 C772 92 748 235 682 346 S545 526 598 666 824 808 838 970 738 1118 782 1280'/%3E%3Cpath d='M1045 -80 C960 45 925 164 982 276 S1180 438 1168 585 970 770 1018 900 1248 1010 1388 1210'/%3E%3Cpath d='M-40 480 C118 432 242 452 338 540 S512 740 668 740 862 622 1008 650 1258 816 1660 785'/%3E%3Cpath d='M-35 1040 C155 940 288 918 412 975 S610 1120 768 1085 998 868 1180 866 1402 965 1660 900'/%3E%3Cpath d='M215 329 C354 322 450 342 558 326'/%3E%3Cpath d='M681 728 C760 642 848 582 965 545'/%3E%3Cpath d='M1020 245 C1118 320 1162 398 1168 585'/%3E%3Cpath d='M522 804 C640 806 742 865 838 970'/%3E%3C/g%3E%3C/svg%3E");
-  background-position: center;
+  opacity: 0.78;
+  background:
+    radial-gradient(circle at 72% 35%, rgba(189, 27, 33, 0.34) 0 1.45rem, rgba(246, 241, 232, 0.78) 1.5rem 2.1rem, rgba(189, 27, 33, 0.22) 2.18rem 2.72rem, transparent 2.8rem),
+    radial-gradient(circle at 20% 86%, rgba(242, 165, 26, 0.58) 0 1.65rem, transparent 1.75rem),
+    radial-gradient(circle at 45% 62%, rgba(242, 165, 26, 0.44) 0 1.1rem, transparent 1.2rem),
+    radial-gradient(63rem 18rem at 62% 44%, transparent 48%, rgba(189, 27, 33, 0.44) 48.25%, rgba(189, 27, 33, 0.44) 49.58%, rgba(242, 165, 26, 0.46) 49.72%, rgba(242, 165, 26, 0.46) 50.05%, rgba(189, 27, 33, 0.44) 50.2%, rgba(189, 27, 33, 0.44) 51.45%, transparent 51.72%),
+    radial-gradient(40rem 24rem at 31% 79%, transparent 46%, rgba(189, 27, 33, 0.4) 46.25%, rgba(189, 27, 33, 0.4) 47.8%, rgba(242, 165, 26, 0.42) 47.94%, rgba(242, 165, 26, 0.42) 48.28%, rgba(189, 27, 33, 0.4) 48.42%, rgba(189, 27, 33, 0.4) 49.85%, transparent 50.12%),
+    linear-gradient(44deg, transparent 0 84%, rgba(189, 27, 33, 0.5) 84% 86%, transparent 86%),
+    linear-gradient(44deg, transparent 0 82.5%, rgba(242, 165, 26, 0.55) 82.5% 83%, transparent 83%);
+  background-position: center 4rem;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 112% 112%;
 }
-
 .route-section .section-shell {
   position: relative;
   z-index: 1;
@@ -413,7 +420,7 @@ a {
 
 .trajectory-item__label {
   color: rgba(17, 21, 27, 0.38);
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
 }
 
 .trajectory-item h3 {
@@ -445,7 +452,7 @@ a {
 
 @media (min-width: 900px) {
   .trajectory-item {
-    grid-template-columns: 4rem minmax(12rem, 0.34fr) minmax(12rem, 0.75fr) minmax(18rem, 1fr);
+    grid-template-columns: 4rem minmax(13.5rem, 0.38fr) minmax(12rem, 0.75fr) minmax(18rem, 1fr);
     align-items: start;
   }
 }
