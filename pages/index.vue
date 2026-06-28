@@ -63,7 +63,7 @@ useSeoMeta({
       </div>
     </section>
 
-    <section id="trajectory" class="paper-section px-4 py-24 text-night md:py-32">
+    <section id="trajectory" class="paper-section route-section px-4 py-24 text-night md:py-32">
       <div class="section-shell section-composition">
         <div class="chapter-mark reveal" aria-hidden="true">
           <span>03</span>
