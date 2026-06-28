@@ -682,14 +682,14 @@ a {
   border: 1px solid rgba(246,241,232,0.18);
   padding: 0.9rem;
   color: var(--vassal-paper);
-  font-size: clamp(1.45rem, 4.8vw, 3.4rem);
-  font-size: clamp(1.45rem, 10cqw, 4rem);
+  font-size: clamp(1.45rem, 4.4vw, 3.2rem);
+  font-size: clamp(1.45rem, 8cqw, 3.2rem);
   font-weight: 900;
   line-height: 0.88;
   min-width: 0;
-  overflow-wrap: anywhere;
-  text-wrap: balance;
   text-transform: uppercase;
+  white-space: nowrap;
+  word-break: normal;
 }
 
 .bridge-grid span:nth-child(1) { background: var(--vassal-red); }
