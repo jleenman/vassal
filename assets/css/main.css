@@ -119,7 +119,7 @@ a {
 }
 
 .route-section::before {
-  opacity: 0.54;
+  opacity: 0.4;
   background:
     radial-gradient(58rem 25rem at 18% 24%, transparent 44%, rgba(17, 21, 27, 0.105) 44.35%, rgba(17, 21, 27, 0.105) 45.2%, transparent 45.55%),
     radial-gradient(47rem 23rem at 78% 15%, transparent 39%, rgba(17, 21, 27, 0.085) 39.35%, rgba(17, 21, 27, 0.085) 40.3%, transparent 40.65%),
@@ -128,18 +128,71 @@ a {
 }
 
 .route-section::after {
-  opacity: 0.78;
-  background:
-    radial-gradient(circle at 72% 35%, rgba(189, 27, 33, 0.34) 0 1.45rem, rgba(246, 241, 232, 0.78) 1.5rem 2.1rem, rgba(189, 27, 33, 0.22) 2.18rem 2.72rem, transparent 2.8rem),
-    radial-gradient(circle at 20% 86%, rgba(242, 165, 26, 0.58) 0 1.65rem, transparent 1.75rem),
-    radial-gradient(circle at 45% 62%, rgba(242, 165, 26, 0.44) 0 1.1rem, transparent 1.2rem),
-    radial-gradient(63rem 18rem at 62% 44%, transparent 48%, rgba(189, 27, 33, 0.44) 48.25%, rgba(189, 27, 33, 0.44) 49.58%, rgba(242, 165, 26, 0.46) 49.72%, rgba(242, 165, 26, 0.46) 50.05%, rgba(189, 27, 33, 0.44) 50.2%, rgba(189, 27, 33, 0.44) 51.45%, transparent 51.72%),
-    radial-gradient(40rem 24rem at 31% 79%, transparent 46%, rgba(189, 27, 33, 0.4) 46.25%, rgba(189, 27, 33, 0.4) 47.8%, rgba(242, 165, 26, 0.42) 47.94%, rgba(242, 165, 26, 0.42) 48.28%, rgba(189, 27, 33, 0.4) 48.42%, rgba(189, 27, 33, 0.4) 49.85%, transparent 50.12%),
-    linear-gradient(44deg, transparent 0 84%, rgba(189, 27, 33, 0.5) 84% 86%, transparent 86%),
-    linear-gradient(44deg, transparent 0 82.5%, rgba(242, 165, 26, 0.55) 82.5% 83%, transparent 83%);
-  background-position: center 4rem;
-  background-repeat: no-repeat;
-  background-size: 112% 112%;
+  display: none;
+  content: none;
+}
+
+.route-map {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.route-map__roads {
+  fill: none;
+  stroke: rgba(17, 21, 27, 0.12);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6;
+}
+
+.route-map__main {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.route-map__route-shadow {
+  stroke: rgba(189, 27, 33, 0.18);
+  stroke-width: 30;
+}
+
+.route-map__route {
+  marker-end: url("#route-arrow");
+  stroke: rgba(189, 27, 33, 0.58);
+  stroke-width: 16;
+}
+
+.route-map__route-dash {
+  stroke: rgba(242, 165, 26, 0.72);
+  stroke-dasharray: 34 26;
+  stroke-width: 5;
+}
+
+.route-map__spur {
+  stroke: rgba(242, 165, 26, 0.48);
+  stroke-width: 7;
+}
+
+.route-map__stop--gold {
+  fill: rgba(242, 165, 26, 0.72);
+}
+
+.route-map__stop--ring {
+  fill: rgba(246, 241, 232, 0.78);
+  stroke: rgba(189, 27, 33, 0.58);
+  stroke-width: 7;
+}
+
+.route-map__stop--red {
+  fill: rgba(189, 27, 33, 0.64);
+}
+
+#route-arrow path {
+  fill: rgba(189, 27, 33, 0.72);
 }
 .route-section .section-shell {
   position: relative;

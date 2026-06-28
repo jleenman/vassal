@@ -64,6 +64,30 @@ useSeoMeta({
     </section>
 
     <section id="trajectory" class="paper-section route-section px-4 py-24 text-night md:py-32">
+      <svg class="route-map" viewBox="0 -300 1600 1200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <marker id="route-arrow" markerWidth="16" markerHeight="16" refX="13" refY="8" orient="auto" markerUnits="strokeWidth">
+            <path d="M1 1 L15 8 L1 15 Z" />
+          </marker>
+        </defs>
+        <g class="route-map__roads">
+          <path d="M-90 760 C170 610 250 360 470 330 S842 462 1020 245 1395 60 1690 160" />
+          <path d="M90 1250 C265 1010 515 930 678 730 S840 312 1118 270 1490 335 1710 74" />
+          <path d="M125 80 C205 150 248 226 245 330 S182 520 248 612 455 692 518 804 445 1010 528 1165" />
+          <path d="M-40 482 C118 434 242 454 338 540 S512 742 668 742 862 624 1008 650 1258 816 1660 785" />
+          <path d="M1035 -80 C960 46 925 164 982 276 S1180 438 1168 586 970 770 1018 902 1248 1010 1390 1215" />
+        </g>
+        <g class="route-map__main">
+          <path class="route-map__route-shadow" d="M-80 1010 C112 832 306 770 486 626 S760 438 952 462 1186 620 1390 514 1525 468 1680 516" />
+          <path class="route-map__route" d="M-80 1010 C112 832 306 770 486 626 S760 438 952 462 1186 620 1390 514 1525 468 1680 516" />
+          <path class="route-map__route-dash" d="M-80 1010 C112 832 306 770 486 626 S760 438 952 462 1186 620 1390 514 1525 468 1680 516" />
+          <path class="route-map__spur" d="M250 650 C350 618 414 654 486 626" />
+          <path class="route-map__spur" d="M952 462 C1035 526 1110 574 1186 620" />
+          <circle class="route-map__stop route-map__stop--gold" cx="486" cy="626" r="18" />
+          <circle class="route-map__stop route-map__stop--ring" cx="952" cy="462" r="20" />
+          <circle class="route-map__stop route-map__stop--red" cx="1390" cy="514" r="20" />
+        </g>
+      </svg>
       <div class="section-shell section-composition">
         <div class="chapter-mark reveal" aria-hidden="true">
           <span>03</span>
