@@ -2,14 +2,16 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const sections = [
+  { id: 'home', label: 'Home' },
   { id: 'thinking', label: 'Denken' },
   { id: 'field', label: 'Werkveld' },
   { id: 'trajectory', label: 'Lijn' },
+  { id: 'personal', label: 'Persoonlijk' },
   { id: 'contact', label: 'Contact' },
 ]
 
 const progress = ref(0)
-const activeSection = ref('thinking')
+const activeSection = ref('home')
 
 const updateSpine = () => {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight

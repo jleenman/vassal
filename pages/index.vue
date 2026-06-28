@@ -129,7 +129,7 @@ useSeoMeta({
       </div>
     </section>
 
-    <section class="bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
+    <section id="personal" class="bg-[#f6f1e8] px-4 py-24 text-night md:py-32">
       <div class="section-shell grid items-center gap-12 lg:grid-cols-[1fr_0.8fr]">
         <div>
           <SectionIntro
