@@ -151,7 +151,14 @@ useSeoMeta({
           <p class="eyebrow">Contact</p>
           <h2 class="mt-5 font-display text-4xl font-extrabold leading-tight md:text-6xl">Voor gesprekken over product, systemen en nieuwe manieren van bouwen.</h2>
           <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a v-for="link in contactLinks" :key="link.href" class="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold text-night transition hover:bg-signal" :href="link.href">
+            <a
+              v-for="link in contactLinks"
+              :key="link.href"
+              class="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold text-night transition hover:bg-signal"
+              :href="link.href"
+              :target="link.href.startsWith('http') ? '_blank' : undefined"
+              :rel="link.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+            >
               {{ link.label }}
             </a>
           </div>
