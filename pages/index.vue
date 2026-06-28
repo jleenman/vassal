@@ -114,7 +114,10 @@ useSeoMeta({
             body="Ik houd van technologie, maar vooral van wat technologie mogelijk maakt als het goed ontworpen is. Buiten werk ben ik vader van vijf. Dat houdt me scherp over aandacht, prioriteit en eenvoud."
           />
         </div>
-        <img class="reveal aspect-square rounded-lg object-cover shadow-glass" :src="assets.portrait" alt="Portretfoto van Jonathan Leenman" />
+        <figure class="personal-portrait reveal">
+          <img class="aspect-square rounded-lg object-cover shadow-glass" :src="assets.portrait" alt="Portretfoto van Jonathan Leenman" />
+          <figcaption>Here&apos;s to the crazy ones.</figcaption>
+        </figure>
       </div>
     </section>
 
