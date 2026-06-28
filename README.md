@@ -2,7 +2,7 @@
 
 Static Nuxt site for Jonathan Leenman's personal homepage.
 
-Live site: https://jleenman.github.io/vassal/
+Live site: https://vassal.nl/
 
 ## Stack
 
@@ -39,9 +39,9 @@ The old WordPress export is kept locally in `archive/`, which is gitignored.
 
 ## GitHub Pages
 
-The GitHub Actions workflow defaults `NUXT_APP_BASE_URL` to `/<repository-name>/`, which is the right value for project Pages.
+The GitHub Actions workflow defaults `NUXT_APP_BASE_URL` to `/`, which is the right value for the custom domain.
 
-For a custom domain or user Pages repository, set the repository variable `NUXT_APP_BASE_URL` to `/`.
+For project Pages without a custom domain, set the repository variable `NUXT_APP_BASE_URL` to `/<repository-name>/`.
 
 For local project-path testing:
 
