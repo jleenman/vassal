@@ -322,7 +322,6 @@ a {
   border: 2px solid rgba(246, 241, 232, 0.55);
   content: "";
   background: var(--vassal-ink);
-  box-shadow: 0 0 0 4px rgba(17, 21, 27, 0.28);
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
