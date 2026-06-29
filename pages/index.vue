@@ -90,11 +90,11 @@ useSeoMeta({
       <div class="section-shell section-composition">
         <div class="chapter-mark reveal" aria-hidden="true">
           <span>03</span>
-          <strong>LINE</strong>
+          <strong>ROUTE</strong>
         </div>
         <div>
           <SectionIntro
-            kicker="De vormende lijn"
+            kicker="De vormende route"
             title="Geen rechte lijn. Wel een duidelijke richting."
             body="Games, onderwijs, websoftware en productontwikkeling lijken losse hoofdstukken. Voor mij vormen ze een patroon: systemen begrijpen, mensen meenemen en abstracte ideeen concreet maken."
           />

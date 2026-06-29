@@ -5,7 +5,7 @@ const sections = [
   { id: 'home', label: 'Home' },
   { id: 'thinking', label: 'Denken' },
   { id: 'field', label: 'Werkveld' },
-  { id: 'trajectory', label: 'Lijn' },
+  { id: 'trajectory', label: 'Route' },
   { id: 'personal', label: 'Persoonlijk' },
   { id: 'contact', label: 'Contact' },
 ]
