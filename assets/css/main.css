@@ -1137,6 +1137,21 @@ a {
   transform: translateX(var(--rail-bottom-dark-x));
 }
 
+.contact-footer-stack {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.contact-footer-stack #contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact-footer-stack #contact > .section-shell {
+  width: 100%;
+}
+
 .cv-page {
   background:
     linear-gradient(90deg, rgba(17, 21, 27, 0.045) 1px, transparent 1px),

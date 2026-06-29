@@ -169,28 +169,30 @@ const resetPrincipleSpotlight = (event: PointerEvent) => {
       </div>
     </section>
 
-    <section id="contact" class="relative overflow-hidden bg-night px-4 py-24 text-ink md:py-32">
-      <div class="section-shell">
-        <div class="reveal glass mx-auto max-w-4xl rounded-lg p-8 text-center md:p-14">
-          <p class="eyebrow">Contact</p>
-          <h2 class="mt-5 font-display text-4xl font-extrabold leading-tight md:text-6xl">Voor gesprekken over product, systemen en nieuwe manieren van bouwen.</h2>
-          <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-            <a
-              v-for="link in contactLinks"
-              :key="link.href"
-              class="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold text-night transition hover:bg-signal"
-              :href="link.href"
-              :target="link.href.startsWith('http') ? '_blank' : undefined"
-              :rel="link.href.startsWith('http') ? 'noopener noreferrer' : undefined"
-            >
-              {{ link.label }}
-            </a>
+    <div class="contact-footer-stack bg-night">
+      <section id="contact" class="relative flex-1 overflow-hidden px-4 py-24 text-ink md:py-32">
+        <div class="section-shell">
+          <div class="reveal glass mx-auto max-w-4xl rounded-lg p-8 text-center md:p-14">
+            <p class="eyebrow">Contact</p>
+            <h2 class="mt-5 font-display text-4xl font-extrabold leading-tight md:text-6xl">Voor gesprekken over product, systemen en nieuwe manieren van bouwen.</h2>
+            <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+              <a
+                v-for="link in contactLinks"
+                :key="link.href"
+                class="rounded-lg bg-ink px-6 py-3 text-sm font-extrabold text-night transition hover:bg-signal"
+                :href="link.href"
+                :target="link.href.startsWith('http') ? '_blank' : undefined"
+                :rel="link.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+              >
+                {{ link.label }}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <SiteFooter />
+      <SiteFooter />
+    </div>
     <ScrollReveals />
   </main>
 </template>
