@@ -554,10 +554,8 @@ a {
   background:
     linear-gradient(90deg, rgba(246,241,232,0.046) 1px, transparent 1px),
     linear-gradient(0deg, rgba(246,241,232,0.038) 1px, transparent 1px),
-    linear-gradient(118deg, transparent 0 19%, rgba(189,27,33,0.16) 19% 19.55%, transparent 19.55%),
-    linear-gradient(118deg, transparent 0 66%, rgba(242,165,26,0.12) 66% 66.45%, transparent 66.45%),
     #11151b;
-  background-size: 72px 72px, 72px 72px, auto, auto, auto;
+  background-size: 72px 72px, 72px 72px, auto;
 }
 
 .vassal-hero::before {
@@ -565,10 +563,86 @@ a {
   inset: 0;
   content: "";
   pointer-events: none;
-  background:
-    linear-gradient(110deg, transparent 0 44%, rgba(189,27,33,0.82) 44% 44.55%, transparent 44.55%),
-    linear-gradient(110deg, transparent 0 51%, rgba(242,165,26,0.5) 51% 51.35%, transparent 51.35%);
-  opacity: 0.7;
+  background: radial-gradient(circle at 50% -22%, rgba(246, 241, 232, 0.08), transparent 34rem);
+  opacity: 0.55;
+}
+
+.hero-rays {
+  position: absolute;
+  top: -34vh;
+  left: 50%;
+  z-index: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.hero-rays span {
+  --ray-angle: calc(-31deg + (var(--ray) * 8.7deg));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 166vh;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(246, 241, 232, 0.02) 8%,
+    rgba(246, 241, 232, 0.12) 36%,
+    rgba(246, 241, 232, 0.035) 72%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: rotate(var(--ray-angle));
+  transform-origin: 50% 0;
+  animation:
+    hero-ray-turn 42s linear infinite,
+    hero-ray-life 11s ease-in-out infinite;
+  animation-delay: calc(var(--ray) * -3.2s), calc(var(--ray) * -1.65s);
+}
+
+.hero-rays span:nth-child(2n) {
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(242, 165, 26, 0.02) 12%,
+    rgba(242, 165, 26, 0.105) 42%,
+    rgba(242, 165, 26, 0.03) 74%,
+    transparent 100%
+  );
+}
+
+.hero-rays span:nth-child(3n) {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(189, 27, 33, 0.018) 14%,
+    rgba(189, 27, 33, 0.11) 44%,
+    rgba(189, 27, 33, 0.028) 76%,
+    transparent 100%
+  );
+}
+
+@keyframes hero-ray-turn {
+  from {
+    transform: rotate(var(--ray-angle));
+  }
+
+  to {
+    transform: rotate(calc(var(--ray-angle) + 7deg));
+  }
+}
+
+@keyframes hero-ray-life {
+  0%, 100% {
+    opacity: 0;
+  }
+
+  22%, 62% {
+    opacity: 0.68;
+  }
 }
 
 .hero-identity {

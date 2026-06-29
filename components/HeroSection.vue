@@ -4,6 +4,9 @@ import vassalLogo from '~/content/assets/vassal-logo.png'
 
 <template>
   <section id="home" class="vassal-hero text-ink">
+    <div class="hero-rays" aria-hidden="true">
+      <span v-for="ray in 8" :key="ray" :style="{ '--ray': ray - 1 }" />
+    </div>
     <div class="section-shell relative z-10 grid min-h-screen items-center gap-10 pb-20 pt-28 lg:grid-cols-[1fr_0.92fr] lg:pt-32">
       <div class="hero-left">
         <div class="reveal hero-identity">
