@@ -638,11 +638,11 @@ a {
 }
 
 .hero-rays span {
-  --ray-angle: calc(-15deg + (var(--ray) * 4.7deg));
+  --ray-angle: calc(-30deg + (var(--ray) * 3.8deg));
   position: absolute;
   top: 0;
   left: 0;
-  width: 3px;
+  width: 4px;
   height: 286vh;
   background: linear-gradient(
     180deg,
@@ -662,7 +662,7 @@ a {
 }
 
 .hero-rays span:nth-child(2n) {
-  width: 2px;
+  width: 3px;
   background: linear-gradient(
     180deg,
     transparent 0%,
@@ -690,7 +690,7 @@ a {
   }
 
   to {
-    transform: rotate(calc(var(--ray-angle) + 4deg));
+    transform: rotate(calc(var(--ray-angle) + 3deg));
   }
 }
 

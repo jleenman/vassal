@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 <template>
   <section id="home" class="vassal-hero text-ink">
     <div class="hero-rays" aria-hidden="true">
-      <span v-for="ray in 8" :key="ray" :style="{ '--ray': ray - 1 }" />
+      <span v-for="ray in 11" :key="ray" :style="{ '--ray': ray - 1 }" />
     </div>
     <div class="section-shell hero-shell relative z-10 grid items-center gap-10 lg:grid-cols-[1fr_0.92fr]">
       <div class="hero-left">
