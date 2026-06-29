@@ -77,6 +77,16 @@ a {
   margin-inline: auto;
 }
 
+.viewport-section {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.viewport-section > .section-shell {
+  width: min(1180px, calc(100% - 32px));
+}
+
 .section-composition {
   display: grid;
   gap: clamp(2rem, 5vw, 4rem);
@@ -971,6 +981,16 @@ a {
   position: relative;
   background:
     linear-gradient(180deg, #11151b 0%, #18222b 100%);
+}
+
+.field-image-wrap {
+  width: min(100%, 27.5rem);
+}
+
+@media (min-width: 1024px) {
+  .field-image-wrap {
+    justify-self: center;
+  }
 }
 
 .bridge-copy {

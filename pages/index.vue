@@ -64,9 +64,9 @@ const resetPrincipleSpotlight = (event: PointerEvent) => {
       </div>
     </section>
 
-    <section id="field" class="relative overflow-hidden bg-graphite px-4 py-24 text-ink md:py-32">
+    <section id="field" class="viewport-section relative overflow-hidden bg-graphite px-4 py-20 text-ink md:py-16">
       <div class="section-shell grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-        <div class="reveal relative overflow-hidden rounded-lg">
+        <div class="field-image-wrap reveal relative overflow-hidden rounded-lg">
           <SignalImagePanel
             :src="assets.rotterdam"
             alt="Uitzicht over Rotterdam als contextbeeld voor systemen, stad en infrastructuur"
@@ -135,7 +135,7 @@ const resetPrincipleSpotlight = (event: PointerEvent) => {
       </div>
     </section>
 
-    <section class="bg-night px-4 py-24 text-ink md:py-32">
+    <section id="impact" class="viewport-section bg-night px-4 py-24 text-ink md:py-32">
       <div class="section-shell grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
           <SectionIntro

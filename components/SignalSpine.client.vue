@@ -2,10 +2,12 @@
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const sections = [
-  { id: 'home', label: 'Home' },
+  { id: 'home', label: 'Profiel' },
+  { id: 'why', label: 'Waarom' },
   { id: 'thinking', label: 'Denken' },
   { id: 'field', label: 'Werkveld' },
   { id: 'trajectory', label: 'Route' },
+  { id: 'impact', label: 'Impact' },
   { id: 'personal', label: 'Persoonlijk' },
   { id: 'contact', label: 'Contact' },
 ]
