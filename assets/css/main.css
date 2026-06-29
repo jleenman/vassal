@@ -1022,10 +1022,14 @@ a {
 }
 
 .signal-image {
-  --rail-top-red: 58%;
-  --rail-top-gold: 72%;
-  --rail-bottom-red: 58%;
-  --rail-bottom-gold: 72%;
+  --rail-top-red-scale: 0.58;
+  --rail-top-gold-x: 58%;
+  --rail-top-gold-scale: 0.14;
+  --rail-top-dark-x: 72%;
+  --rail-bottom-red-scale: 0.58;
+  --rail-bottom-gold-x: 58%;
+  --rail-bottom-gold-scale: 0.14;
+  --rail-bottom-dark-x: 72%;
   position: relative;
   margin: 0;
   overflow: hidden;
@@ -1035,10 +1039,14 @@ a {
 
 .signal-image:hover,
 .signal-image:focus-within {
-  --rail-top-red: 28%;
-  --rail-top-gold: 55%;
-  --rail-bottom-red: 72%;
-  --rail-bottom-gold: 86%;
+  --rail-top-red-scale: 0.28;
+  --rail-top-gold-x: 28%;
+  --rail-top-gold-scale: 0.27;
+  --rail-top-dark-x: 55%;
+  --rail-bottom-red-scale: 0.72;
+  --rail-bottom-gold-x: 72%;
+  --rail-bottom-gold-scale: 0.14;
+  --rail-bottom-dark-x: 86%;
 }
 
 .signal-image img {
@@ -1071,27 +1079,62 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
-  transition: background 340ms cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+  background: #11151b;
 }
 
 .rail-image-top {
   top: 0;
-  background: linear-gradient(
-    90deg,
-    var(--vassal-red) 0 var(--rail-top-red),
-    var(--vassal-gold) var(--rail-top-red) var(--rail-top-gold),
-    #11151b var(--rail-top-gold) 100%
-  );
 }
 
 .rail-image-bottom {
   bottom: 0;
-  background: linear-gradient(
-    90deg,
-    var(--vassal-red) 0 var(--rail-bottom-red),
-    var(--vassal-gold) var(--rail-bottom-red) var(--rail-bottom-gold),
-    #11151b var(--rail-bottom-gold) 100%
-  );
+}
+
+.rail-segment {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: 100%;
+  transform-origin: left center;
+  transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.rail-segment--red {
+  background: var(--vassal-red);
+}
+
+.rail-segment--gold {
+  background: var(--vassal-gold);
+}
+
+.rail-segment--dark {
+  background: #11151b;
+}
+
+.rail-image-top .rail-segment--red {
+  transform: scaleX(var(--rail-top-red-scale));
+}
+
+.rail-image-top .rail-segment--gold {
+  transform: translateX(var(--rail-top-gold-x)) scaleX(var(--rail-top-gold-scale));
+}
+
+.rail-image-top .rail-segment--dark {
+  transform: translateX(var(--rail-top-dark-x));
+}
+
+.rail-image-bottom .rail-segment--red {
+  transform: scaleX(var(--rail-bottom-red-scale));
+}
+
+.rail-image-bottom .rail-segment--gold {
+  transform: translateX(var(--rail-bottom-gold-x)) scaleX(var(--rail-bottom-gold-scale));
+}
+
+.rail-image-bottom .rail-segment--dark {
+  transform: translateX(var(--rail-bottom-dark-x));
 }
 
 .cv-page {
