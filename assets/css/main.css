@@ -756,15 +756,42 @@ a {
 }
 
 .hero-manifesto {
+  --hero-depth: 0;
   position: relative;
   z-index: 4;
+  isolation: isolate;
   border: 1px solid rgba(246,241,232,0.16);
   padding: clamp(1.4rem, 4vw, 2.4rem);
   background:
     linear-gradient(135deg, rgba(24,34,43,0.94), rgba(17,21,27,0.88)),
     repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 14px);
-  box-shadow: 0.72rem 0.72rem 0 var(--vassal-red), -0.42rem -0.42rem 0 rgba(242,165,26,0.86);
   backdrop-filter: blur(16px);
+}
+
+.hero-manifesto::before,
+.hero-manifesto::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  transition: transform 120ms linear;
+}
+
+.hero-manifesto::before {
+  background: var(--vassal-red);
+  transform: translate(
+    calc(0.72rem + (var(--hero-depth) * 0.34rem)),
+    calc(0.72rem + (var(--hero-depth) * 0.48rem))
+  );
+}
+
+.hero-manifesto::after {
+  background: rgba(242,165,26,0.86);
+  transform: translate(
+    calc(-0.42rem - (var(--hero-depth) * 0.22rem)),
+    calc(-0.42rem - (var(--hero-depth) * 0.3rem))
+  );
 }
 
 .signal-diagram {

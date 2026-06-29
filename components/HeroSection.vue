@@ -1,3 +1,41 @@
+<script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue'
+
+const manifesto = ref<HTMLElement | null>(null)
+
+let frame = 0
+
+const updateDepth = () => {
+  frame = 0
+  const element = manifesto.value
+  const hero = document.getElementById('home')
+  if (!element || !hero) return
+
+  const rect = hero.getBoundingClientRect()
+  const depth = Math.min(1, Math.max(0, -rect.top / window.innerHeight))
+  element.style.setProperty('--hero-depth', depth.toFixed(3))
+}
+
+const scheduleDepthUpdate = () => {
+  if (frame) return
+  frame = window.requestAnimationFrame(updateDepth)
+}
+
+onMounted(() => {
+  updateDepth()
+  window.addEventListener('scroll', scheduleDepthUpdate, { passive: true })
+  window.addEventListener('resize', scheduleDepthUpdate)
+})
+
+onBeforeUnmount(() => {
+  if (frame) {
+    window.cancelAnimationFrame(frame)
+  }
+  window.removeEventListener('scroll', scheduleDepthUpdate)
+  window.removeEventListener('resize', scheduleDepthUpdate)
+})
+</script>
+
 <template>
   <section id="home" class="vassal-hero text-ink">
     <div class="hero-rays" aria-hidden="true">
@@ -19,7 +57,7 @@
         </p>
       </div>
 
-      <aside class="reveal hero-manifesto" aria-label="Korte positionering">
+      <aside ref="manifesto" class="reveal hero-manifesto" aria-label="Korte positionering">
         <div class="signal-diagram" aria-hidden="true">
           <span />
           <span />
