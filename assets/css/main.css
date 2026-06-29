@@ -917,6 +917,18 @@ a {
   z-index: 20;
 }
 
+.intro-rail-scope {
+  position: relative;
+}
+
+.intro-rail {
+  position: sticky;
+  top: calc(100vh - 12px);
+  bottom: auto;
+  z-index: 35;
+  margin-bottom: -12px;
+}
+
 .bridge-section {
   position: relative;
   background:

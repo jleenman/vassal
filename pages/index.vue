@@ -26,8 +26,11 @@ const resetPrincipleSpotlight = (event: PointerEvent) => {
 <template>
   <main>
     <SignalSpine />
-    <HeroSection />
-    <DifferenceBridge />
+    <div class="intro-rail-scope">
+      <div class="sticky-rail rail-bottom intro-rail" aria-hidden="true" />
+      <HeroSection />
+      <DifferenceBridge />
+    </div>
 
     <section id="thinking" class="paper-section relative px-4 py-24 text-night md:py-32">
       <div class="section-shell section-composition">

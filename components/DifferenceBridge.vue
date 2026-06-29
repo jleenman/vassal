@@ -19,6 +19,5 @@
         </div>
       </div>
     </div>
-    <div class="sticky-rail rail-bottom" aria-hidden="true" />
   </section>
 </template>
