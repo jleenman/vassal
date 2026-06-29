@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <figure class="signal-image reveal">
+  <figure class="signal-image reveal" tabindex="0">
     <div class="sticky-rail rail-image-top" aria-hidden="true" />
     <img :src="src" :alt="alt" />
     <figcaption>{{ caption }}</figcaption>

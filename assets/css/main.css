@@ -946,11 +946,23 @@ a {
 }
 
 .signal-image {
+  --rail-top-red: 58%;
+  --rail-top-gold: 72%;
+  --rail-bottom-red: 58%;
+  --rail-bottom-gold: 72%;
   position: relative;
   margin: 0;
   overflow: hidden;
   background: #11151b;
   box-shadow: 0.72rem 0.72rem 0 var(--vassal-red);
+}
+
+.signal-image:hover,
+.signal-image:focus-within {
+  --rail-top-red: 28%;
+  --rail-top-gold: 55%;
+  --rail-bottom-red: 72%;
+  --rail-bottom-gold: 86%;
 }
 
 .signal-image img {
@@ -983,14 +995,27 @@ a {
   left: 0;
   right: 0;
   z-index: 5;
+  transition: background 340ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .rail-image-top {
   top: 0;
+  background: linear-gradient(
+    90deg,
+    var(--vassal-red) 0 var(--rail-top-red),
+    var(--vassal-gold) var(--rail-top-red) var(--rail-top-gold),
+    #11151b var(--rail-top-gold) 100%
+  );
 }
 
 .rail-image-bottom {
   bottom: 0;
+  background: linear-gradient(
+    90deg,
+    var(--vassal-red) 0 var(--rail-bottom-red),
+    var(--vassal-gold) var(--rail-bottom-red) var(--rail-bottom-gold),
+    #11151b var(--rail-bottom-gold) 100%
+  );
 }
 
 .cv-page {
