@@ -8,6 +8,19 @@ useSeoMeta({
   ogTitle: 'VASSAL - Jonathan Leenman',
   ogDescription: 'Product thinker, builder en systems thinker op het snijvlak van product, UX, software en data.',
 })
+
+const updatePrincipleSpotlight = (event: PointerEvent) => {
+  const card = event.currentTarget as HTMLElement
+  const rect = card.getBoundingClientRect()
+  card.style.setProperty('--spot-x', `${event.clientX - rect.left}px`)
+  card.style.setProperty('--spot-y', `${event.clientY - rect.top}px`)
+}
+
+const resetPrincipleSpotlight = (event: PointerEvent) => {
+  const card = event.currentTarget as HTMLElement
+  card.style.removeProperty('--spot-x')
+  card.style.removeProperty('--spot-y')
+}
 </script>
 
 <template>
@@ -29,7 +42,16 @@ useSeoMeta({
             body="Vaak zit de echte beweging in het model erachter: rollen, data, context, frictie en timing. Ik probeer complexe domeinen terug te brengen tot heldere modellen, betere keuzes en interfaces die logisch voelen."
           />
           <div class="principle-board mt-14">
-            <article v-for="principle in principles" :key="principle.kicker" class="reveal principle-card" :data-kicker="principle.kicker">
+            <article
+              v-for="principle in principles"
+              :key="principle.kicker"
+              class="reveal principle-card"
+              :data-kicker="principle.kicker"
+              tabindex="0"
+              @pointermove="updatePrincipleSpotlight"
+              @pointerleave="resetPrincipleSpotlight"
+            >
+              <span class="principle-card__spotlight" aria-hidden="true" />
               <p class="principle-card__kicker">{{ principle.kicker }}</p>
               <h3>{{ principle.title }}</h3>
               <p>{{ principle.body }}</p>
