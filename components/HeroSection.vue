@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import vassalLogo from '~/content/assets/vassal-logo.png'
-</script>
-
 <template>
   <section id="home" class="vassal-hero text-ink">
     <div class="hero-rays" aria-hidden="true">
@@ -10,7 +6,6 @@ import vassalLogo from '~/content/assets/vassal-logo.png'
     <div class="section-shell relative z-10 grid min-h-screen items-center gap-10 pb-20 pt-28 lg:grid-cols-[1fr_0.92fr] lg:pt-32">
       <div class="hero-left">
         <div class="reveal hero-identity">
-          <img :src="vassalLogo" alt="" aria-hidden="true" />
           <p>Jonathan Leenman / Schiedam / product, systems, code, taste</p>
         </div>
         <div class="reveal zword-wrap" aria-label="VASSAL">
