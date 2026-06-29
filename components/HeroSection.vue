@@ -58,6 +58,7 @@ onBeforeUnmount(() => {
       </div>
 
       <aside ref="manifesto" class="reveal hero-manifesto" aria-label="Korte positionering">
+        <span class="hero-manifesto__surface" aria-hidden="true" />
         <div class="signal-diagram" aria-hidden="true">
           <span />
           <span />
