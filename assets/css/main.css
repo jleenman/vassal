@@ -563,14 +563,14 @@ a {
   inset: 0;
   content: "";
   pointer-events: none;
-  background: radial-gradient(circle at 50% -22%, rgba(246, 241, 232, 0.08), transparent 34rem);
-  opacity: 0.55;
+  background: radial-gradient(circle at 84% -72%, rgba(246, 241, 232, 0.12), transparent 42rem);
+  opacity: 0.68;
 }
 
 .hero-rays {
   position: absolute;
-  top: -34vh;
-  left: 50%;
+  top: -128vh;
+  left: 86%;
   z-index: 0;
   width: 1px;
   height: 1px;
@@ -579,37 +579,37 @@ a {
 }
 
 .hero-rays span {
-  --ray-angle: calc(-31deg + (var(--ray) * 8.7deg));
+  --ray-angle: calc(-15deg + (var(--ray) * 4.7deg));
   position: absolute;
   top: 0;
   left: 0;
-  width: 2px;
-  height: 166vh;
+  width: 3px;
+  height: 286vh;
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(246, 241, 232, 0.02) 8%,
-    rgba(246, 241, 232, 0.12) 36%,
-    rgba(246, 241, 232, 0.035) 72%,
+    rgba(246, 241, 232, 0.035) 14%,
+    rgba(246, 241, 232, 0.24) 48%,
+    rgba(246, 241, 232, 0.065) 82%,
     transparent 100%
   );
   opacity: 0;
   transform: rotate(var(--ray-angle));
   transform-origin: 50% 0;
   animation:
-    hero-ray-turn 42s linear infinite,
-    hero-ray-life 11s ease-in-out infinite;
-  animation-delay: calc(var(--ray) * -3.2s), calc(var(--ray) * -1.65s);
+    hero-ray-turn 58s linear infinite,
+    hero-ray-life 13s ease-in-out infinite;
+  animation-delay: calc(var(--ray) * -4.1s), calc(var(--ray) * -1.85s);
 }
 
 .hero-rays span:nth-child(2n) {
-  width: 1px;
+  width: 2px;
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(242, 165, 26, 0.02) 12%,
-    rgba(242, 165, 26, 0.105) 42%,
-    rgba(242, 165, 26, 0.03) 74%,
+    rgba(242, 165, 26, 0.04) 14%,
+    rgba(242, 165, 26, 0.32) 48%,
+    rgba(242, 165, 26, 0.07) 82%,
     transparent 100%
   );
 }
@@ -618,9 +618,9 @@ a {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(189, 27, 33, 0.018) 14%,
-    rgba(189, 27, 33, 0.11) 44%,
-    rgba(189, 27, 33, 0.028) 76%,
+    rgba(189, 27, 33, 0.035) 14%,
+    rgba(189, 27, 33, 0.28) 48%,
+    rgba(189, 27, 33, 0.06) 82%,
     transparent 100%
   );
 }
@@ -631,7 +631,7 @@ a {
   }
 
   to {
-    transform: rotate(calc(var(--ray-angle) + 7deg));
+    transform: rotate(calc(var(--ray-angle) + 4deg));
   }
 }
 
@@ -641,7 +641,7 @@ a {
   }
 
   22%, 62% {
-    opacity: 0.68;
+    opacity: 0.86;
   }
 }
 
