@@ -119,12 +119,11 @@ a {
 }
 
 .route-section::before {
-  opacity: 0.4;
+  opacity: 0.24;
   background:
-    radial-gradient(58rem 25rem at 18% 24%, transparent 44%, rgba(17, 21, 27, 0.105) 44.35%, rgba(17, 21, 27, 0.105) 45.2%, transparent 45.55%),
-    radial-gradient(47rem 23rem at 78% 15%, transparent 39%, rgba(17, 21, 27, 0.085) 39.35%, rgba(17, 21, 27, 0.085) 40.3%, transparent 40.65%),
-    radial-gradient(52rem 28rem at 62% 92%, transparent 42%, rgba(17, 21, 27, 0.09) 42.35%, rgba(17, 21, 27, 0.09) 43.15%, transparent 43.5%),
-    radial-gradient(38rem 38rem at 2% 88%, transparent 47%, rgba(17, 21, 27, 0.075) 47.35%, rgba(17, 21, 27, 0.075) 48.4%, transparent 48.75%);
+    radial-gradient(70rem 32rem at 12% 30%, transparent 49%, rgba(17, 21, 27, 0.04) 49.35%, rgba(17, 21, 27, 0.04) 50%, transparent 50.35%),
+    linear-gradient(104deg, transparent 0 18%, rgba(17, 21, 27, 0.035) 18.1% 18.28%, transparent 18.4%),
+    linear-gradient(27deg, transparent 0 67%, rgba(17, 21, 27, 0.03) 67.08% 67.26%, transparent 67.4%);
 }
 
 .route-section::after {
@@ -143,10 +142,11 @@ a {
 
 .route-map__roads {
   fill: none;
-  stroke: rgba(17, 21, 27, 0.12);
+  opacity: 0.58;
+  stroke: rgba(17, 21, 27, 0.075);
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-width: 6;
+  stroke-width: 4;
 }
 
 .route-map__main {
@@ -156,43 +156,43 @@ a {
 }
 
 .route-map__route-shadow {
-  stroke: rgba(189, 27, 33, 0.18);
-  stroke-width: 30;
+  stroke: rgba(189, 27, 33, 0.1);
+  stroke-width: 24;
 }
 
 .route-map__route {
   marker-end: url("#route-arrow");
-  stroke: rgba(189, 27, 33, 0.58);
-  stroke-width: 16;
+  stroke: rgba(189, 27, 33, 0.48);
+  stroke-width: 13;
 }
 
 .route-map__route-dash {
-  stroke: rgba(242, 165, 26, 0.72);
-  stroke-dasharray: 34 26;
-  stroke-width: 5;
+  stroke: rgba(242, 165, 26, 0.56);
+  stroke-dasharray: 28 30;
+  stroke-width: 4;
 }
 
 .route-map__spur {
-  stroke: rgba(242, 165, 26, 0.48);
-  stroke-width: 7;
+  stroke: rgba(242, 165, 26, 0.28);
+  stroke-width: 4;
 }
 
 .route-map__stop--gold {
-  fill: rgba(242, 165, 26, 0.72);
+  fill: rgba(242, 165, 26, 0.5);
 }
 
 .route-map__stop--ring {
-  fill: rgba(246, 241, 232, 0.78);
-  stroke: rgba(189, 27, 33, 0.58);
-  stroke-width: 7;
+  fill: rgba(246, 241, 232, 0.58);
+  stroke: rgba(189, 27, 33, 0.36);
+  stroke-width: 5;
 }
 
 .route-map__stop--red {
-  fill: rgba(189, 27, 33, 0.64);
+  fill: rgba(189, 27, 33, 0.48);
 }
 
 #route-arrow path {
-  fill: rgba(189, 27, 33, 0.72);
+  fill: rgba(189, 27, 33, 0.58);
 }
 .route-section .section-shell {
   position: relative;
