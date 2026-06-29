@@ -611,6 +611,12 @@ a {
   background-size: 72px 72px, 72px 72px, auto;
 }
 
+.hero-shell {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding-block: clamp(5.25rem, 9vh, 7rem) clamp(3rem, 6vh, 5rem);
+}
+
 .vassal-hero::before {
   position: absolute;
   inset: 0;

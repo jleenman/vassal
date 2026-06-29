@@ -41,7 +41,7 @@ onBeforeUnmount(() => {
     <div class="hero-rays" aria-hidden="true">
       <span v-for="ray in 8" :key="ray" :style="{ '--ray': ray - 1 }" />
     </div>
-    <div class="section-shell relative z-10 grid min-h-screen items-center gap-10 pb-20 pt-28 lg:grid-cols-[1fr_0.92fr] lg:pt-32">
+    <div class="section-shell hero-shell relative z-10 grid items-center gap-10 lg:grid-cols-[1fr_0.92fr]">
       <div class="hero-left">
         <div class="reveal hero-identity">
           <p>Jonathan Leenman / Schiedam / product, systems, code, taste</p>
